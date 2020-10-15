@@ -101,6 +101,7 @@
             this.btn_ujfelvetel.TabIndex = 3;
             this.btn_ujfelvetel.Text = "Új személy felvitele";
             this.btn_ujfelvetel.UseVisualStyleBackColor = true;
+            this.btn_ujfelvetel.Click += new System.EventHandler(this.Btn_ujfelvetel_Click);
             // 
             // lbl2
             // 

@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,10 +20,15 @@ namespace WFA201015
 
         public FrmMain()
         {
-            conn = new SqlConnection(
 
+            AppDomain.CurrentDomain.SetData(
+                "DataDirectory", 
+                Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.Replace(@"bin\Debug", @"\res")));
+            /*2 új névtér fent, a DataDirectory elérési útvonalát változtatjuk meg bin\debug helyett a \res mappában keresse az mdf file-testc*/
+
+            conn = new SqlConnection(
                @"Server = (localdb)\MSSQLLocalDB;" +
-               @"AttachDbFileName=|DataDirectory|\res\turautvonalak.mdf;"); /*|konkrét környezeti változó van benne: bin/debug/res - attól függ, h honnan fut az exe|*/
+               @"AttachDbFileName=|DataDirectory|turautvonalak.mdf;"); /*|konkrét környezeti változó van benne: bin/debug/res - attól függ, h honnan fut az exe|*/
 
             
 
@@ -52,6 +59,13 @@ namespace WFA201015
         private void FrmMain_Load(object sender, EventArgs e)
         {
             DgvFeltolt();
+        }
+
+        private void Btn_ujfelvetel_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmUjTurazo(conn); //létrehozok egy formot, ami az Uj Túrázó egy példánya
+            //frm.Show(); /*ebből futási időben annyi lesz, ahányszor rányomok, Single ton kell*/
+            frm.ShowDialog(); /*Diagólus ablakban nyitom meg: így csak egyszer engedi, vissza se tudok menni a másik formra, áthelyezni, méretezni sem tudom*/
         }
     }
 }
