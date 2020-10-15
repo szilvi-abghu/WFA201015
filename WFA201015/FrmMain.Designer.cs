@@ -28,75 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbl_1 = new System.Windows.Forms.Label();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_ujfelvetel = new System.Windows.Forms.Button();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.btn_frissites = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Természetjárók nyilvántartása";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.lbl_1.AutoSize = true;
+            this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_1.Location = new System.Drawing.Point(48, 24);
+            this.lbl_1.Name = "lbl_1";
+            this.lbl_1.Size = new System.Drawing.Size(378, 31);
+            this.lbl_1.TabIndex = 0;
+            this.lbl_1.Text = "Természetjárók nyilvántartása";
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(54, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(129, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Új személy felvitele";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "A nyilvántartásban szereplő túrázók adatai";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(479, 358);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Adatok frissítése";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dgv.Location = new System.Drawing.Point(54, 182);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(541, 196);
+            this.dgv.TabIndex = 1;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Azonosito";
+            this.Column1.HeaderText = "Azonosító";
             this.Column1.Name = "Column1";
             // 
             // Column2
@@ -119,11 +92,42 @@
             this.Column5.HeaderText = "Telefonszám";
             this.Column5.Name = "Column5";
             // 
+            // btn_ujfelvetel
+            // 
+            this.btn_ujfelvetel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_ujfelvetel.Location = new System.Drawing.Point(72, 422);
+            this.btn_ujfelvetel.Name = "btn_ujfelvetel";
+            this.btn_ujfelvetel.Size = new System.Drawing.Size(145, 50);
+            this.btn_ujfelvetel.TabIndex = 3;
+            this.btn_ujfelvetel.Text = "Új személy felvitele";
+            this.btn_ujfelvetel.UseVisualStyleBackColor = true;
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl2.Location = new System.Drawing.Point(142, 85);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(379, 25);
+            this.lbl2.TabIndex = 4;
+            this.lbl2.Text = "A nyilvántartásban szereplő túrázók adatai";
+            // 
+            // btn_frissites
+            // 
+            this.btn_frissites.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_frissites.Location = new System.Drawing.Point(458, 422);
+            this.btn_frissites.Name = "btn_frissites";
+            this.btn_frissites.Size = new System.Drawing.Size(137, 50);
+            this.btn_frissites.TabIndex = 5;
+            this.btn_frissites.Text = "Adatok frissítése";
+            this.btn_frissites.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(613, 24);
+            this.pictureBox1.Image = global::WFA201015.Properties.Resources.jegmadar1;
+            this.pictureBox1.Location = new System.Drawing.Point(602, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 151);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,16 +135,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(948, 494);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_frissites);
+            this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.btn_ujfelvetel);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.lbl_1);
             this.Name = "FrmMain";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Természetjáró nyilvántartó program";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,17 +154,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbl_1;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button btn_ujfelvetel;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Button btn_frissites;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
