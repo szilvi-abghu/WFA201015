@@ -122,6 +122,7 @@
             this.btn_frissites.TabIndex = 5;
             this.btn_frissites.Text = "Adatok frissítése";
             this.btn_frissites.UseVisualStyleBackColor = true;
+            this.btn_frissites.Click += new System.EventHandler(this.Btn_frissites_Click);
             // 
             // pictureBox1
             // 

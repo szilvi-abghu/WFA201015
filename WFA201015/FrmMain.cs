@@ -67,5 +67,10 @@ namespace WFA201015
             //frm.Show(); /*ebből futási időben annyi lesz, ahányszor rányomok, Single ton kell*/
             frm.ShowDialog(); /*Diagólus ablakban nyitom meg: így csak egyszer engedi, vissza se tudok menni a másik formra, áthelyezni, méretezni sem tudom*/
         }
+
+        private void Btn_frissites_Click(object sender, EventArgs e)
+        {
+            DgvFeltolt();
+        }
     }
 }
